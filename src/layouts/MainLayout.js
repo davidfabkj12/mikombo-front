@@ -153,7 +153,7 @@ const MainLayout = () => {
                 ) : (
                   <Link
                     to="/login"
-                    className="py-2 px-4 bg-primary text-white rounded-full text-center"
+                    className="py-2 px-4 bg-primary text-gray rounded-full text-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Connexion
