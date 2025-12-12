@@ -31,6 +31,9 @@ const MainLayout = () => {
                 <span className="text-white font-bold text-xl">M</span>
               </div>
               <span className="font-bold text-xl" style={{ fontFamily: 'Playfair Display' }}>Mikombo Park</span>
+              <div className="w-100 h-100 rounded-lg bg-gradient-to-br from-slate-700 to-slate-900 dark:from-slate-600 dark:to-slate-800 flex items-center justify-center">
+                  <img src="logo1.jpg" alt="Dreamcode Hub Logo" className="w-32 h-16 rounded-lg" />
+                </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -154,6 +157,7 @@ const MainLayout = () => {
                   <Link
                     to="/login"
                     className="py-2 px-4 bg-primary text-white rounded-full text-center"
+                    className="py-2 px-4 bg-primary text-gray rounded-full text-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Connexion
@@ -177,6 +181,8 @@ const MainLayout = () => {
             <div>
               <h3 className="text-xl font-bold mb-4 text-white" style={{ fontFamily: 'Playfair Display' }}>Mikombo Park</h3>
               <p className="text-gray-300">Parc agro-touristique près de Lubumbashi, RDC. Production bio et visite d'animaux.</p>
+              <h3 className="text-xl font-bold mb-4 text-white" style={{ fontFamily: 'Playfair Display' }}>Park Mikombo</h3>
+              <p className="text-gray-300">Park agro-touristique près de Lubumbashi, RDC. Production bio et visite d'animaux.</p>
             </div>
             <div>
               <h4 className="font-bold mb-4 text-white">Liens Rapides</h4>
@@ -195,6 +201,7 @@ const MainLayout = () => {
           </div>
           <div className="mt-8 pt-8 border-t border-gray-600 text-center text-gray-300">
             <p>&copy; 2024 Mikombo Park. Tous droits réservés.</p>
+            <p>&copy; 2026 Mikombo Park. Tous droits réservés.</p>
           </div>
         </div>
       </footer>

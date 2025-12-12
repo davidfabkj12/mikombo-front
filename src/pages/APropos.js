@@ -46,6 +46,7 @@ const APropos = () => {
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Découvrez l'histoire et la mission du Mikombo Park
+            Découvrez l'histoire et la mission du Park Mikombo
           </p>
         </div>
       </section>
@@ -61,6 +62,8 @@ const APropos = () => {
               <p>
                 Le Mikombo Park est né d'une passion pour l'agriculture durable et le bien-être animal.
                 Situé à quelques kilomètres de Lubumbashi en République Démocratique du Congo, notre parc
+                Le Park Mikombo est né d'une passion pour l'agriculture durable et le bien-être animal.
+                Situé à quelques kilomètres de Lubumbashi en République Démocratique du Congo, notre park
                 s'étend sur plusieurs hectares de terres préservées.
               </p>
               <p>

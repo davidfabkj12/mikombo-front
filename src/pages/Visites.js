@@ -97,6 +97,7 @@ const Visites = () => {
           <h2 className="section-title">Nos Animaux</h2>
           <p className="section-subtitle">
             Rencontrez les habitants de notre parc
+            Rencontrez les habitants de notre park
           </p>
           {loading ? (
             <div className="text-center py-12">
@@ -114,11 +115,13 @@ const Visites = () => {
                     {animal.photo ? (
                       <img
                         src={`${process.env.REACT_APP_BACKEND_URL}${animal.photo}`}
+                        src={`${API}${animal.photo}`}
                         alt={animal.nom}
                         className="w-full h-full object-cover"
                       />
                     ) : (
                       <span className="text-4xl">🦁</span>
+                      <span className="text-4xl"></span>
                     )}
                   </div>
                   <h3 className="font-semibold text-lg mb-1">{animal.nom}</h3>

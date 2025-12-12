@@ -27,6 +27,7 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-content fade-in-up">
           <h1 className="hero-title" data-testid="hero-title">Bienvenue au Mikombo Park</h1>
+          <h1 className="hero-title" data-testid="hero-title">Bienvenue au Park Mikombo</h1>
           <p className="hero-subtitle" data-testid="hero-subtitle">
             Découvrez un espace unique où agriculture bio et tourisme animalier se rencontrent près de Lubumbashi
           </p>
@@ -51,6 +52,7 @@ const Home = () => {
       <section className="section" style={{ backgroundColor: 'var(--white)' }}>
         <div className="container">
           <h2 className="section-title">Pourquoi Mikombo Park ?</h2>
+          <h2 className="section-title">Pourquoi Park Mikombo ?</h2>
           <p className="section-subtitle">
             Un engagement pour la qualité, la durabilité et le bien-être animal
           </p>
@@ -81,8 +83,10 @@ const Home = () => {
                 <Users className="w-20 h-20 text-green-600" />
               </div>
               <h3 className="text-2xl font-semibold mb-3">Visites du Parc</h3>
+              <h3 className="text-2xl font-semibold mb-3">Visites du Park</h3>
               <p className="text-gray-600 mb-4">
                 Explorez notre parc et rencontrez nos animaux : lions, girafes et bien d'autres espèces dans leur habitat naturel.
+                Explorez notre park et rencontrez nos animaux : lions, girafes et bien d'autres espèces dans leur habitat naturel.
               </p>
               <Link to="/visites" data-testid="learn-more-visits">
                 <button className="btn-primary">En savoir plus</button>
@@ -115,6 +119,7 @@ const Home = () => {
             </div>
             <p className="text-gray-600 mb-6">
               Notre parc est situé à quelques kilomètres de Lubumbashi, facilement accessible en voiture.
+              Notre park est situé à quelques kilomètres de Lubumbashi, facilement accessible en voiture.
               Venez nous rendre visite pour une expérience inoubliable !
             </p>
             <Link to="/a-propos" data-testid="contact-us-button">

@@ -50,6 +50,9 @@ const AdminLayout = () => {
               {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
             <h1 className="text-xl font-bold" style={{ fontFamily: 'Playfair Display' }}>Admin - Mikombo Park</h1>
+            <div className="w-100 h-100 rounded-lg bg-gradient-to-br from-slate-700 to-slate-900 dark:from-slate-600 dark:to-slate-800 flex items-center justify-center">
+              <img src="logo1.jpg" alt="Dreamcode Hub Logo" className="w-32 h-16 rounded-lg" />
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <Link

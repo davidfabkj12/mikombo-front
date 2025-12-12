@@ -90,11 +90,13 @@ const Produits = () => {
                     {produit.photos && produit.photos.length > 0 ? (
                       <img
                         src={`${process.env.REACT_APP_BACKEND_URL}${produit.photos[0]}`}
+                        src={`${API}${produit.photos[0]}`}
                         alt={produit.nom}
                         className="w-full h-full object-cover"
                       />
                     ) : (
                       <span className="text-5xl">🥬</span>
+                      <span className="text-5xl"></span>
                     )}
                   </div>
                   <div className="flex justify-between items-start mb-2">
@@ -111,6 +113,7 @@ const Produits = () => {
                     <div>
                       <p className="text-lg font-bold" style={{ color: 'var(--secondary)' }}>
                         {produit.prix} USD
+                        {produit.prix} FC
                       </p>
                       <p className="text-xs text-gray-500">par {produit.unite}</p>
                     </div>
