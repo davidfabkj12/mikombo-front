@@ -87,14 +87,10 @@ const Panier = () => {
           </div>
         ) : (
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Items List */}
             
             {/* ✅ Items List */}
             <div className="lg:col-span-2 space-y-4">
               {cart.map(item => (
-                <div key={item.produit_id} className="card flex items-center gap-4" data-testid={`cart-item-${item.produit_id}`}>
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-50 to-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">🥬</span>
                 <div
                   key={item.produit_id}
                   className="card flex flex-col sm:flex-row items-center sm:items-start gap-4"
@@ -103,25 +99,20 @@ const Panier = () => {
                   <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-green-50 to-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <span className="text-2xl"></span>
                   </div>
-                  <div className="flex-1">
 
                   <div className="flex-1 text-center sm:text-left">
                     <h3 className="font-semibold text-lg">{item.nom}</h3>
-                    <p className="text-sm text-gray-500">{item.prix} USD / {item.unite}</p>
                     <p className="text-sm text-gray-500">{item.prix} FC / {item.unite}</p>
                   </div>
-                  <div className="flex items-center gap-2">
 
                   <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
                     <Button
                       size="sm"
                       variant="outline"
                       onClick={() => handleQuantityChange(item.produit_id, item.quantite - 1)}
-                      data-testid={`decrease-quantity-${item.produit_id}`}
                     >
                       <Minus className="w-4 h-4" />
                     </Button>
-                    <span className="w-12 text-center font-medium" data-testid={`item-quantity-${item.produit_id}`}>
 
                     <span className="w-12 text-center font-medium">
                       {item.quantite}
@@ -131,16 +122,13 @@ const Panier = () => {
                       size="sm"
                       variant="outline"
                       onClick={() => handleQuantityChange(item.produit_id, item.quantite + 1)}
-                      data-testid={`increase-quantity-${item.produit_id}`}
                     >
                       <Plus className="w-4 h-4" />
                     </Button>
                   </div>
-                  <div className="text-right">
 
                   <div className="text-center sm:text-right w-full sm:w-auto">
                     <p className="font-bold text-lg" style={{ color: 'var(--secondary)' }}>
-                      {(item.prix * item.quantite).toFixed(2)} USD
                       {(item.prix * item.quantite).toFixed(2)} FC
                     </p>
                   </div>
@@ -150,7 +138,6 @@ const Panier = () => {
                     variant="ghost"
                     onClick={() => removeFromCart(item.produit_id)}
                     className="text-red-500 hover:text-red-700"
-                    data-testid={`remove-item-${item.produit_id}`}
                   >
                     <Trash2 className="w-4 h-4" />
                   </Button>
@@ -158,24 +145,18 @@ const Panier = () => {
               ))}
             </div>
 
-            {/* Summary and Checkout */}
             {/* ✅ Summary */}
             <div className="lg:col-span-1">
-              <div className="card sticky top-20">
               <div className="card sm:sticky sm:top-20">
                 <h2 className="text-xl font-bold mb-4">Résumé de la commande</h2>
-                
 
                 <div className="space-y-2 mb-4 pb-4 border-b">
                   <div className="flex justify-between">
                     <span>Sous-total</span>
-                    <span>{getTotal().toFixed(2)} USD</span>
                     <span>{getTotal().toFixed(2)} FC</span>
                   </div>
                   <div className="flex justify-between text-xl font-bold">
                     <span>Total</span>
-                    <span style={{ color: 'var(--secondary)' }} data-testid="cart-total">
-                      {getTotal().toFixed(2)} USD
                     <span style={{ color: 'var(--secondary)' }}>
                       {getTotal().toFixed(2)} FC
                     </span>
@@ -184,15 +165,12 @@ const Panier = () => {
 
                 <div className="space-y-4 mb-4">
                   <Label className="font-semibold">Mode de retrait</Label>
-                  <RadioGroup value={modeRetrait} onValueChange={setModeRetrait} data-testid="mode-retrait-group">
                   <RadioGroup value={modeRetrait} onValueChange={setModeRetrait}>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="sur_place" id="sur_place" data-testid="retrait-sur-place" />
                       <RadioGroupItem value="sur_place" id="sur_place" />
                       <Label htmlFor="sur_place" className="cursor-pointer">Retrait sur place</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="livraison" id="livraison" data-testid="retrait-livraison" />
                       <RadioGroupItem value="livraison" id="livraison" />
                       <Label htmlFor="livraison" className="cursor-pointer">Livraison à domicile</Label>
                     </div>
@@ -207,7 +185,6 @@ const Panier = () => {
                         value={adresseLivraison}
                         onChange={(e) => setAdresseLivraison(e.target.value)}
                         className="mt-1"
-                        data-testid="adresse-livraison-input"
                       />
                     </div>
                   )}
@@ -217,7 +194,6 @@ const Panier = () => {
                   onClick={handleCommander}
                   disabled={processing}
                   className="w-full bg-primary hover:bg-primary-dark"
-                  data-testid="commander-button"
                 >
                   {processing ? 'Traitement...' : 'Commander'}
                 </Button>
