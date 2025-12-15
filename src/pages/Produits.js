@@ -89,7 +89,6 @@ const Produits = () => {
                   <div className="aspect-square bg-gradient-to-br from-green-50 to-green-100 rounded-lg mb-3 flex items-center justify-center overflow-hidden">
                     {produit.photos && produit.photos.length > 0 ? (
                       <img
-                        src={`${process.env.REACT_APP_BACKEND_URL}${produit.photos[0]}`}
                         src={`${API}${produit.photos[0]}`}
                         alt={produit.nom}
                         className="w-full h-full object-cover"
