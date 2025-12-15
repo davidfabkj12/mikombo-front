@@ -114,7 +114,7 @@ const Visites = () => {
                   <div className="aspect-square bg-gradient-to-br from-green-100 to-green-200 rounded-lg mb-3 flex items-center justify-center overflow-hidden">
                     {animal.photo ? (
                       <img
-                        src={`${process.env.REACT_APP_BACKEND_URL}${animal.photo}`}
+                        src={`${API}${animal.photo}`}
                         src={`${API}${animal.photo}`}
                         alt={animal.nom}
                         className="w-full h-full object-cover"
