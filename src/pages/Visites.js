@@ -115,7 +115,6 @@ const Visites = () => {
                     {animal.photo ? (
                       <img
                         src={`${API}${animal.photo}`}
-                        src={`${API}${animal.photo}`}
                         alt={animal.nom}
                         className="w-full h-full object-cover"
                       />
